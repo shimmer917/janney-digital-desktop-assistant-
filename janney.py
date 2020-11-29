@@ -62,7 +62,7 @@ def takeCommand():
 def Newsin(): 
       
     # news api 
-    main_url = "http://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=5fd2c89ca2f74ec29ef604edf5ecdc6c"
+    main_url = "http://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey= -----"#write api key
     # fetching data in json format 
     open= requests.get(main_url).json() 
   
@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
         elif 'open code' in query:
             speak("please wait... opening code")
-            codePath = "C:\\Users\\pc\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            codePath = "C:\\Users\\pc\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe" #target path in your pc
             os.startfile(codePath)
             time.sleep(5)
 
@@ -200,7 +200,7 @@ if __name__ == "__main__":
             exit()
 
         else:
-            app_id = "7UXU7G-Q8UJ6AET9R"
+            app_id = "-----"#write api key
             client = wolframalpha.Client(app_id) 
             res = client.query(query) 
             answer = next(res.results).text 
